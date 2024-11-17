@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quiz Platform</h1>
+    <button class="admin-button hidden" onclick="openAdmin()">Admin</button>
+
+    <div id="login-section">
+        <h2>Login</h2>
+        <input type="text" id="login-id" placeholder="Login ID" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="quiz-section" class="hidden">
+        <p>Question 1: Capital of France? <input type="text" id="q1"></p>
+        <p>Question 2: 2 + 2? <input type="text" id="q2"></p>
+        <button onclick="submitQuiz()">Submit</button>
+    </div>
+
+    <div id="admin-section" class="hidden">
+        <h2>Admin Panel</h2>
+        <button onclick="resetCredentials()">Reset Credentials</button>
+        <div id="admin-credentials"></div>
+        <button onclick="closeAdmin()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
